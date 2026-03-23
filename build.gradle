@@ -1,0 +1,8 @@
+allprojects {
+    def projectPath = project.path.replace(':', '/')
+    if (projectPath == '/') {
+        layout.buildDirectory = file("$rootDir/build")
+    } else {
+        layout.buildDirectory = file("$rootDir/build$projectPath")
+    }
+}

@@ -1,0 +1,7 @@
+rootProject.name = 'ADS'
+
+rootDir.eachDirMatch(~/module\d+/) { superModuleDir ->
+    superModuleDir.eachDirMatch(~/lab\d+\.\d+/) { labDir ->
+        include "${superModuleDir.name}:${labDir.name}"
+    }
+}
