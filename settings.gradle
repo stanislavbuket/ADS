@@ -5,3 +5,5 @@ rootDir.eachDirMatch(~/module\d+/) { superModuleDir ->
         include "${superModuleDir.name}:${labDir.name}"
     }
 }
+
+include 'homework'
