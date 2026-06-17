@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        try {
+            System.setOut(new java.io.PrintStream(System.out, true, "UTF-8"));
+        } catch (java.io.UnsupportedEncodingException e) {
+            // fallback
+        }
         Scanner scanner = new Scanner(System.in);
         
         while (true) {

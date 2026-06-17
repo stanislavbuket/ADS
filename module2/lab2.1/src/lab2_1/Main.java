@@ -6,8 +6,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
+        try {
+            System.setOut(new java.io.PrintStream(System.out, true, "UTF-8"));
+        } catch (java.io.UnsupportedEncodingException e) {
+            // fallback
+        }
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
         
         while (true) {
             System.out.println("\n=== Лабораторна робота 2.1 — Варіант 4 ===");
